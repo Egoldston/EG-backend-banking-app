@@ -7,7 +7,7 @@ const e = require('express');
 
 // used to serve static files from public directory
 app.use(express.static('public'));
-app.use(cors({origin: 'https://bb-backend-py4z.onrender.com/', credentials: true }));
+app.use(cors({origin: true, credentials: true }));
 
 // app.use(cors({
 //     origin: 'https://bb-backend-py4z.onrender.com/',
