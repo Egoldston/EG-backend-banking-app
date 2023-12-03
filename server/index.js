@@ -81,7 +81,7 @@ firebaseAdmin.initializeApp({
 
 
 // create user account
-app.get('https://bb-backend-py4z.onrender.com/account/create/:name/:email/:password', function (req, res) {
+app.get('/account/create/:name/:email/:password', function (req, res) {
 
     console.log('inside account creation endpoint');
 
