@@ -19,33 +19,33 @@ app.use(express.static('public'));
 
 // app.use(cors({ origin: ['http://localhost:3000', 'https://bb-backend-py4z.onrender.com/'], credentials: true }))
 
-// app.use((req, res, next) => {
-//     res.setHeader(
-//       "Access-Control-Allow-Origin",
-//       "https://bb-backend-py4z.onrender.com/"
-//     );
-//     res.setHeader(
-//       "Access-Control-Allow-Methods",
-//       "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,CONNECT,TRACE"
-//     );
-//     res.setHeader(
-//       "Access-Control-Allow-Headers",
-//       "Content-Type, Authorization, X-Content-Type-Options, Accept, X-Requested-With, Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
-//     );
-//     res.setHeader("Access-Control-Allow-Credentials", true);
-//     res.setHeader("Access-Control-Allow-Private-Network", true);
-//     //  Firefox caps this at 24 hours (86400 seconds). Chromium (starting in v76) caps at 2 hours (7200 seconds). The default value is 5 seconds.
-//     res.setHeader("Access-Control-Max-Age", 7200);
-  
-//     next();
-//   });
-
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*'); // '*' allows access from any origin, use specific domains for production
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-  next();
-});
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://bb-frontend.onrender.com"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,CONNECT,TRACE"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization, X-Content-Type-Options, Accept, X-Requested-With, Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+    );
+    res.setHeader("Access-Control-Allow-Credentials", true);
+    res.setHeader("Access-Control-Allow-Private-Network", true);
+    //  Firefox caps this at 24 hours (86400 seconds). Chromium (starting in v76) caps at 2 hours (7200 seconds). The default value is 5 seconds.
+    res.setHeader("Access-Control-Max-Age", 7200);
+  
+    next();
+  });
+
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*'); // '*' allows access from any origin, use specific domains for production
+//   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+//   next();
+// });
 
 
 
