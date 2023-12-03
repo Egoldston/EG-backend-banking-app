@@ -17,7 +17,7 @@ app.use(express.static('public'));
 // ));
 // app.options('*', cors());
 
-app.use(cors({ origin: ['http://localhost:3000', 'https://bb-backend-py4z.onrender.com/'], credentials: true }))
+// app.use(cors({ origin: ['http://localhost:3000', 'https://bb-backend-py4z.onrender.com/'], credentials: true }))
 
 app.use((req, res, next) => {
     res.setHeader(
