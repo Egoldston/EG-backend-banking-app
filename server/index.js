@@ -7,19 +7,8 @@ const e = require('express');
 
 // used to serve static files from public directory
 app.use(express.static('public'));
-// app.use(cors({credentials: true, origin: 'https://bb-backend-py4z.onrender.com/'}));
-app.use(function(req, res, next) {
-    // res.header("Access-Control-Allow-Origin", "*");
-    const allowedOrigins = ['http://localhost:3000', 'https://bb-backend-py4z.onrender.com/'];
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-         res.setHeader('Access-Control-Allow-Origin', origin);
-    }
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-    res.header("Access-Control-Allow-credentials", true);
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
-    next();
-  });
+app.use(cors({origin: 'https://bb-backend-py4z.onrender.com/', credentials: true }));
+
 
 
 // Authentication Middleware
