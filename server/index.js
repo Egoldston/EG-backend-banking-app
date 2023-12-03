@@ -7,7 +7,8 @@ const e = require('express');
 
 // used to serve static files from public directory
 app.use(express.static('public'));
-app.use(cors({credentials: true, origin: true}));
+app.use(cors({credentials: true, origin: 'https://bb-backend-py4z.onrender.com/'}));
+
 
 
 // Authentication Middleware
